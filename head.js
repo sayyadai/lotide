@@ -1,6 +1,6 @@
 const assertEqual = function(actual, expected) {
   const succeed = `👍👍👍 Assertion Passed: ${actual} === ${expected}`;
-  const fail = `💩💩💩 Assertion Failed: ${actual} === ${expected}`;
+  const fail = `💩💩💩 Assertion Failed: ${actual} !== ${expected}`;
   if (actual === expected) {
     console.log(succeed);
   } else {
@@ -16,4 +16,4 @@ const head = function(array){
 assertEqual(head([5, 6, 7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello")
 assertEqual(head(["Hello"]), "Hello")
-assertEqual(head([]), )
+assertEqual(head([]), undefined)
