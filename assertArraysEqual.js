@@ -1,6 +1,6 @@
 const eqArrays = function(actual, expected) {
   if (actual.length !== expected.length) {
-    console.log(false);
+    return (false);
   }
   for (let i = 0; i < actual.length; i++) {
     if (actual[i] !== expected[i])
@@ -20,6 +20,6 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-// assertArraysEqual([1, 2, 3], [1, 2, 3]); // True
-// assertArraysEqual([3, 2, 1], [1, 2, 3]); // False
-// assertArraysEqual([1, 2, 3, 4, 5], ["a", "b", "c", "d", "e"])
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // True
+assertArraysEqual([3, 2, 1], [1, 2, 3]); // False
+assertArraysEqual([1, 2, 3, 4, 5], ["a", "b", "c", "d", "e"])
