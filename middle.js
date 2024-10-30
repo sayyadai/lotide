@@ -21,28 +21,28 @@ const eqArrays = function(actual, expected) {
 };
 
 
-const middle = function (arr) {
-  const output = []
+const middle = function(arr) {
+  const output = [];
   // for array with 2 or less elements
   if (arr.length <= 2) {
-    return output
+    return output;
   }
 
   // for odd number array with length more than 2
-  if (arr.length % 2 !== 0){
+  if (arr.length % 2 !== 0) {
     const middleIndex = Math.floor(arr.length / 2);
-    output.push(arr[middleIndex])
+    output.push(arr[middleIndex]);
   } else {
     // for even number array with length more than 2
-    const middleIndex = arr.length /2;
-    output.push(arr[middleIndex - 1], arr[middleIndex])
+    const middleIndex = arr.length / 2;
+    output.push(arr[middleIndex - 1], arr[middleIndex]);
   }
-  return output
-} 
+  return output;
+};
 
 assertArraysEqual(middle([1]), []);
 assertArraysEqual(middle([1, 2]), []);
 assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3])
-assertArraysEqual(middle([1, 2, 3, 4],), [2, 3])
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4])
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
+assertArraysEqual(middle([1, 2, 3, 4],), [2, 3]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
