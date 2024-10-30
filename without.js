@@ -21,9 +21,13 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 const without = function(actual, itemsToRemove) {
-  const output = actual.filter(val => !itemsToRemove.includes(val));
-  
-  return output;
+  const result = []
+  for (let i = 0; i < actual.length; i++) {
+    if(!itemsToRemove.includes(actual[i])) { 
+      result.push(actual[i]);
+    }
+  } 
+  return result
 };
 
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => [2, 3]
